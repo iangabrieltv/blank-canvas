@@ -2,20 +2,33 @@
   position: relative;
   display: grid;
   grid-template-columns: 40% 60%;
-  height: clamp(520px, 33.4vw, 684px);
-  min-height: 0;
-  background-color: var(--background);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  min-height: 560px;
+  height: clamp(560px, 38vw, 720px);
   overflow: hidden;
+  background: var(--background);
+}
+
+.about-section .about-portrait-wrap {
+  grid-column: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.about-section .about-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .about-section .about-copy {
   grid-column: 2;
   align-self: center;
   justify-self: center;
-  width: min(72%, 520px);
+  width: min(78%, 560px);
   padding: 44px 24px;
   text-align: center;
 }
@@ -52,25 +65,21 @@
   margin: 24px auto 0;
 }
 
-.about-section .about-portrait,
-.about-section .about-signature {
-  display: none;
-}
-
 @media (max-width: 800px) {
   .about-section {
-    display: block;
-    height: 680px;
-    min-height: 680px;
-    background-position: center center;
-    background-size: cover;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    height: 620px;
+    min-height: 620px;
   }
 
   .about-section .about-copy {
-    width: 60%;
-    margin-left: auto;
-    margin-right: 3%;
-    padding: 52px 10px;
+    width: 88%;
+    padding: 34px 10px;
+  }
+
+  .about-section .about-copy h2 {
+    font-size: 30px;
   }
 
   .about-section .about-copy > p:not(.eyebrow) {
@@ -85,14 +94,20 @@
 
 @media (max-width: 560px) {
   .about-section {
-    height: 760px;
-    min-height: 760px;
-    background-position: 28% center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+
+  .about-section .about-portrait-wrap {
+    width: 100%;
+    height: 390px;
+    flex: 0 0 390px;
   }
 
   .about-section .about-copy {
-    width: 92%;
-    margin: 0 auto;
-    padding: 360px 18px 40px;
+    width: 100%;
+    padding: 44px 24px 48px;
   }
 }
