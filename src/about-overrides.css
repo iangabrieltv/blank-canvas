@@ -1,20 +1,98 @@
-.about-section { position: relative; display: grid; grid-template-columns: 50% 50%; min-height: 520px; background-color: var(--background); background-image: url("./assets/beleza-que-ja-existe-em-voce.webp"); background-repeat: no-repeat; background-position: center center; background-size: cover; overflow: hidden; }
-.about-section .about-copy { grid-column: 2; align-self: center; justify-self: center; width: min(78%, 500px); padding: 52px 24px; text-align: center; }
-.about-section .about-copy .eyebrow { margin-bottom: 10px; }
-.about-section .about-copy h2 { font-size: clamp(34px, 3.2vw, 52px); line-height: .95; }
-.about-section .about-subtitle { margin-top: 10px; }
-.about-section .about-copy > p:not(.eyebrow) { font-size: 12px; line-height: 1.65; margin-top: 14px; }
-.about-section .about-copy .pill { margin-top: 20px; }
-.about-section .about-copy::after { content: ""; display: block; width: 150px; height: 54px; max-width: 42%; margin: 24px auto 0; background: url("./assets/paula-logo-premium.png") center / contain no-repeat; }
-.about-section .about-portrait,
-.about-section .about-signature { display: none; }
-@media (max-width: 800px) {
-  .about-section { display: block; min-height: 680px; background-position: 28% center; background-size: cover; }
-  .about-section .about-copy { width: 72%; margin-left: auto; margin-right: 4%; padding: 52px 10px; }
-  .about-section .about-copy > p:not(.eyebrow) { font-size: 11px; }
-  .about-section .about-copy::after { width: 125px; height: 46px; }
+.about-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: clamp(520px, 33.4vw, 684px);
+  min-height: 0;
+  background-color: var(--background);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
 }
+
+.about-section .about-copy {
+  grid-column: 2;
+  align-self: center;
+  justify-self: center;
+  width: min(72%, 520px);
+  padding: 44px 24px;
+  text-align: center;
+}
+
+.about-section .about-copy .eyebrow {
+  margin-bottom: 10px;
+}
+
+.about-section .about-copy h2 {
+  font-size: clamp(34px, 3.2vw, 52px);
+  line-height: .95;
+}
+
+.about-section .about-subtitle {
+  margin-top: 10px;
+}
+
+.about-section .about-copy > p:not(.eyebrow) {
+  font-size: 12px;
+  line-height: 1.65;
+  margin-top: 14px;
+}
+
+.about-section .about-copy .pill {
+  margin-top: 20px;
+}
+
+.about-section .about-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+  max-height: 58px;
+  object-fit: contain;
+  margin: 24px auto 0;
+}
+
+.about-section .about-portrait,
+.about-section .about-signature {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .about-section {
+    display: block;
+    height: 680px;
+    min-height: 680px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .about-section .about-copy {
+    width: 60%;
+    margin-left: auto;
+    margin-right: 3%;
+    padding: 52px 10px;
+  }
+
+  .about-section .about-copy > p:not(.eyebrow) {
+    font-size: 11px;
+  }
+
+  .about-section .about-logo {
+    width: 125px;
+    max-height: 46px;
+  }
+}
+
 @media (max-width: 560px) {
-  .about-section { min-height: 760px; background-position: 22% center; }
-  .about-section .about-copy { width: 92%; margin: 0 auto; padding: 360px 18px 40px; }
+  .about-section {
+    height: 760px;
+    min-height: 760px;
+    background-position: 28% center;
+  }
+
+  .about-section .about-copy {
+    width: 92%;
+    margin: 0 auto;
+    padding: 360px 18px 40px;
+  }
 }
