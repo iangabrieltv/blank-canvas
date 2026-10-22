@@ -11,17 +11,18 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { Button } from "../components/ui/button";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#F6EFE5] px-4 text-[#32180F]">
+    <div className="flex min-h-screen items-center justify-center bg-background px-4 text-foreground">
       <div className="max-w-md text-center">
         <h1 className="font-serif text-7xl">404</h1>
         <h2 className="mt-4 text-xl font-semibold">Página não encontrada</h2>
         <p className="mt-2 text-sm opacity-70">A página que você procura não existe ou foi movida.</p>
         <div className="mt-6">
-          <Link to="/" className="inline-flex items-center justify-center rounded-full bg-[#A65F30] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#51291B]">
+          <Link to="/" className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:bg-primary/90">
             Voltar ao início
           </Link>
         </div>
@@ -38,13 +39,13 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#F6EFE5] px-4 text-[#32180F]">
+    <div className="flex min-h-screen items-center justify-center bg-background px-4 text-foreground">
       <div className="max-w-md text-center">
         <h1 className="font-serif text-3xl font-semibold">Não foi possível carregar a página.</h1>
         <p className="mt-3 text-sm opacity-70">Tente atualizar a página ou voltar para o início.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <button onClick={() => { router.invalidate(); reset(); }} className="rounded-full bg-[#A65F30] px-5 py-3 text-sm font-medium text-white">Tentar novamente</button>
-          <a href="/" className="rounded-full border border-[#C58A57]/40 px-5 py-3 text-sm font-medium">Ir para o início</a>
+          <Button onClick={() => { router.invalidate(); reset(); }} className="rounded-full">Tentar novamente</Button>
+          <a href="/" className="rounded-full border border-border px-5 py-3 text-sm font-medium">Ir para o início</a>
         </div>
       </div>
     </div>
@@ -66,7 +67,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
