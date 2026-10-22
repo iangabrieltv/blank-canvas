@@ -1,4 +1,4 @@
-import logo from '@/assets/logo-transparent.png.asset.json';
+import logo from '@/assets/paula-logo-premium.png';
 import about from '@/assets/about-refined.png.asset.json';
 import signature from '@/assets/signature.png.asset.json';
 import bronze from '@/assets/bronze.png.asset.json';
@@ -33,7 +33,7 @@ export const site = {
     'Sou Paula Medeiros, especialista em bronzeamento e estética, e acredito que a beleza vai muito além da aparência. É sobre autoestima, bem-estar e se sentir bem na própria pele.',
     'Aqui, você encontra um espaço seguro, acolhedor e pensado especialmente para você.',
   ],
-  images: { logo: logo.url, hero, about: about.url, signature: signature.url, booking: booking.url, map: map.url },
+  images: { logo, hero, about: about.url, signature: signature.url, booking: booking.url, map: map.url },
 };
 
 export const navigation = [
