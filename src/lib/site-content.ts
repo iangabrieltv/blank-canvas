@@ -16,6 +16,7 @@ import avatar1 from '@/assets/avatar-1.png.asset.json';
 import avatar2 from '@/assets/avatar-2.png.asset.json';
 import avatar3 from '@/assets/avatar-3.png.asset.json';
 import hero from '@/assets/hero-clean.png';
+import '@/structural-overrides.css';
 
 // Conteúdo separado da apresentação: textos, fotos e contatos podem ser editados aqui.
 export const site = {
