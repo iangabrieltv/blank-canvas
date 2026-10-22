@@ -1,5 +1,5 @@
-import logo from '@/assets/logo.png.asset.json';
-import about from '@/assets/about.png.asset.json';
+import logo from '@/assets/logo-transparent.png.asset.json';
+import about from '@/assets/about-refined.png.asset.json';
 import signature from '@/assets/signature.png.asset.json';
 import bronze from '@/assets/bronze.png.asset.json';
 import massagens from '@/assets/massagens.png.asset.json';
